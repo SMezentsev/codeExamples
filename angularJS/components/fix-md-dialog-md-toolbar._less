@@ -1,0 +1,4 @@
+md-dialog md-toolbar {
+  z-index: auto;
+  position: initial;
+}

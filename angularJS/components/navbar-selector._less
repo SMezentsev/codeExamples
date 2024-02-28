@@ -1,0 +1,8 @@
+md-toolbar {
+  md-select {
+    margin-top: 0;
+  }
+  md-select-label {
+    border-bottom: none !important;
+  }
+}

@@ -1,0 +1,15 @@
+.btn-loader {
+  transition: all 0.2s;
+  display: inline-block;
+  margin: 0 0 0 5px;
+  width: auto;
+  visibility: visible;
+  opacity: 1;
+  &.is-hidden {
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    margin-left:0;
+  }
+}

@@ -1,0 +1,42 @@
+//.arow, .acol { overflow: hidden; position: absolute; }
+//.arow { left: 0; right: 0; }
+//.acol { top: 0; bottom: 0; }
+//.ascroll-x { overflow-x: auto; }
+//.ascroll-y { overflow-y: auto; }
+//
+//body {
+//  overflow: hidden;
+//}
+//[fh-layout] {
+//  display: table;
+//  width: 100%;
+//  height: 100%;
+//  overflow: hidden;
+//}
+//
+//[fh-layout] > div {
+//  display: table-row;
+//  width: 100%;
+//  border: 1px solid green;
+//}
+//
+//[fh-layout] > div > div {
+//  display: table-cell;
+//  width: 100%;
+//  border-radius:10px;
+//}
+//
+////#header > div {
+////  wheight:50px;
+////  border:solid 2px #aaa;
+////}
+//
+//[fh-layout] > [fh-layout-content] {
+//  height: 100%;
+//  overflow-y: auto;
+//}
+
+//#footer > div {
+//  dheight:50px;
+//  border:solid 2px #a55;
+//}

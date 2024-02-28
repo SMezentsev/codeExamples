@@ -1,0 +1,6 @@
+.md-select-label {
+  padding-top: 27px;
+}
+.md-select-container > label:first-child {
+  top: 0;
+}

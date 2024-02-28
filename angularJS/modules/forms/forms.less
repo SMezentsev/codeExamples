@@ -1,0 +1,35 @@
+textarea.form-control {
+  resize: vertical;
+}
+.form-group {
+  position: relative;
+  [control] {
+    position: absolute;
+    top: 4px;
+    right: 0;
+  }
+}
+
+form  {
+  margin: 0px !important;
+}
+
+.form-inline {
+  .form-group {
+    margin-left: 10px;
+    min-width: 195px;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+}
+
+
+
+.show-hide-password {
+  color: #555;
+  user-select:none;
+  cursor: pointer;
+  pointer-events: auto !important;
+}

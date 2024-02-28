@@ -1,0 +1,79 @@
+.og-datepicker-input {
+  table {
+    outline: none;
+  }
+  input {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    display: block;
+    width: 100% !important;
+    &.empty {
+      opacity: 1;
+    }
+    &.btn-disabled {
+      corsor: default;
+      color: red;
+    }
+  }
+
+  i.fa-close {
+    margin-right: 15px;
+  }
+
+  .dropdown-menu {
+    padding: 0;
+  }
+  .btn {
+  }
+  .btn-disabled {
+    corsor: default !important;
+    color: #efefef !important;
+  }
+  .form-control.display {
+    display: block;
+  }
+
+}
+.has-feedback[class^="col-"] {
+  &>.form-control-feedback {
+    right: 15px;
+  }
+}
+
+
+.og-datepicker-input .datepicker-clear {
+
+  text-align: center;
+  cursor: pointer;
+  li:hover & {
+    display: block;
+    background: transparent !important;
+  }
+
+}
+
+
+
+
+//[datepicker-popup-wrap] {
+//  button.btn:not(.btn-info) {
+//    background-color: transparent;
+//  }
+//  button.current {
+//    border: 1px solid #ccc;
+//  }
+//}
+
+//.form-inline {
+//  .og-datepicker-input {
+//    .display {
+//      width: 100%;
+//    }
+//  }
+//}
+
+//.form-inline {
+//  margin-bottom: 10px;
+//}

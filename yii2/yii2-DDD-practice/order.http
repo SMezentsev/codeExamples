@@ -1,0 +1,190 @@
+POST http://{{host}}/api/v1/user/login.json
+Content-Type: application/json;charset=utf-8
+
+{
+	"email": "b2b@sst.su",
+	"password": "b2b"
+}
+
+> {% client.global.set("auth_token", response.body.token); %}
+
+###
+
+GET http://{{host}}/api/v1/cart.json
+Content-Type: application/json;charset=utf-8
+Authorization: Bearer {{auth_token}}
+
+###
+
+GET http://{{host}}/api/v1/order.json
+Content-Type: application/json;charset=utf-8
+Authorization: Bearer {{auth_token}}
+
+###
+
+POST http://{{host}}/api/v1/cart/disk/825800.json
+Content-Type: application/json;charset=utf-8
+Authorization: Bearer {{auth_token}}
+
+###
+
+POST http://{{host}}/api/v2/orders
+Content-Type: application/json;charset=utf-8
+Authorization: Bearer {{auth_token}}
+
+{
+	"deliveryType": "pickup",
+	"delivery": {
+		"date": "2022-09-28T21:00:00.000Z",
+		"payment": "invoice",
+		"shop": 23,
+		"comment": "test",
+		"schedule": null
+	}
+}
+
+###
+
+POST http://{{host}}/api/v2/orders
+Content-Type: application/json;charset=utf-8
+Authorization: Bearer {{auth_token}}
+
+{
+	"deliveryType": "city_region",
+	"delivery": {
+		"payment": "cash",
+		"storedAddress": {
+			"id": 10206,
+			"hash": "ae083bed2187279e15a8325866202a6b",
+			"address": {
+				"city": "Kaliningrad",
+				"house": "1",
+				"coords": {
+					"lat": 55.753215,
+					"lng": 37.622504
+				},
+				"street": "Ленина",
+				"autoAddress": "Москва, Тверской район, Спасская улица",
+				"fullAddress": "Kaliningrad, Ленина, 1"
+			},
+			"useInApi": false,
+			"deliveryDate": {
+				"orderTypeId": 2,
+				"min": {
+					"day": 1,
+					"dayDatetime": "Tue, 27 Sep 2022 00:00:00 +0300",
+					"dayText": "27.09.2022"
+				},
+				"max": {
+					"day": 6,
+					"dayDatetime": "Sun, 02 Oct 2022 23:59:59 +0300",
+					"dayText": "02.10.2022"
+				},
+				"days": {
+					"1": "Понедельник",
+					"2": "Вторник",
+					"3": "Среда",
+					"4": "Четверг",
+					"5": "Пятница",
+					"6": "Суббота",
+					"7": "Воскресенье"
+				}
+			}
+		},
+		"city": "Kaliningrad",
+		"street": "Ленина",
+		"house": "1",
+		"coords": [
+			55.753215,
+			37.622504
+		],
+		"autoAddress": {
+			"addressText": "Москва, Тверской район, Спасская улица"
+		},
+		"date": "2022-09-30T21:00:00.000Z",
+		"expressDelivery": null,
+		"schedule": "default0918",
+		"comment": "TEST"
+	}
+}
+
+###
+
+POST http://{{host}}/api/v2/orders
+Content-Type: application/json;charset=utf-8
+Authorization: Bearer {{auth_token}}
+
+{
+	"deliveryType": "city_region",
+	"delivery": {
+		"payment": "cash",
+		"city": "Москва и ЦФО",
+		"poiType": "metro",
+		"poi": {
+			"id": 51,
+			"type": "metro",
+			"lineId": 3,
+			"title": "Академическая",
+			"geoPosition": [55.687147, 37.5723],
+			"areaRadius": 7000,
+			"delivery": {
+				"days": {
+					"1": "Понедельник",
+					"2": "Вторник",
+					"3": "Среда",
+					"4": "Четверг",
+					"5": "Пятница",
+					"6": "Суббота",
+					"7": "Воскресенье"
+				}
+			},
+			"fromZones": [
+				{
+					"orderTypeId": 2,
+					"min": {
+						"day": 4,
+						"dayDatetime": "Fri, 30 Sep 2022 00:00:00 +0300",
+						"dayText": "30.09.2022"
+					},
+					"max": {
+						"day": 9,
+						"dayDatetime": "Wed, 05 Oct 2022 23:59:59 +0300",
+						"dayText": "05.10.2022"
+					}
+				}
+			]
+		},
+		"schedule": "default0918",
+		"expressDelivery": null,
+		"coords": [55.687147, 37.5723],
+		"autoAddress": "Академическая",
+		"date": "2022-10-04T15:00:00.000Z",
+		"street": "Ленина",
+		"house": "300",
+		"comment": "ТЕСТ!!!"
+	}
+}
+
+###
+
+POST http://{{host}}/api/v2/orders
+Content-Type: application/json;charset=utf-8
+Authorization: Bearer {{auth_token}}
+
+{
+	"deliveryType": "russia_tc",
+	"delivery": {
+		"city": null,
+		"tc": "pak",
+		"userCity": "Тула",
+		"userTc": null,
+		"payment": "invoice",
+		"comment": "ТЕСТ!"
+	}
+}
+
+
+###
+GET http://{{host}}/api/v1/cart/delivery/city_region/55.753215,37.622504.json
+Content-Type: application/json;charset=utf-8
+Authorization: Bearer {{auth_token}}

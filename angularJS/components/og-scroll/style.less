@@ -1,0 +1,49 @@
+[og-scroll-container] {
+  overflow-y: hidden;
+}
+[og-scroll] {
+  overflow-y: auto;
+
+}
+
+[og-scroll-fixed] {
+  margin:  0 !important;
+}
+
+//////////////////
+
+html,body {
+//  overflow: hidden !important;
+}
+
+.nicescroll-rails {
+
+  .rail-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1px 6px;
+    .rail {
+      width: 100%;
+      height: 100%;
+      background: #aaa;
+      opacity: 0.5;
+    }
+  }
+
+  &.is-hor .rail-wrap {
+    padding: 6px 1px;
+  }
+
+  .cursor {
+    padding: 4px;
+    z-index: 2;
+  }
+  .handler {
+    height: 100%;
+    width: 100%;
+    background: #aaa;
+  }
+}

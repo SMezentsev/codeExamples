@@ -1,0 +1,140 @@
+@keyframes turn180 {
+  100% {
+    transform:rotate(180deg);
+  }
+}
+
+ul.og-vertical-nav {
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  li {
+    display: block;
+    li {
+      a {
+        padding-left: 3rem;
+        font-size: 100%;
+      }
+    }
+   a {
+     display: block;
+     text-decoration: none;
+      box-sizing: border-box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 120%;
+      width: 100%;
+      height:  auto;
+      padding: 1rem 2rem;
+      margin:  0;
+      border-radius: 0;
+      text-align: left;
+     color:  #ddd;
+      p {
+        box-sizing: border-box;
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        margin: 0;
+      }
+      .toggle-icon {
+        transition: transform 0.2s;
+        transform-origin: 50% 50%;
+        &:before {
+          line-height: 100%;
+        }
+      }
+    }
+
+    .children {
+      overflow: hidden;
+      ul {
+        display: block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: -100%;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    &.children-open {
+      .toggle-icon {
+        transform:scaleY(-1);
+      }
+      .children {
+        ul {
+          margin-bottom:0;
+        }
+      }
+    }
+  }
+
+}
+md-sidenav {
+  overflow: hidden;
+  .vertical-menu {
+    position: relative;
+//    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.55,0,0.55,0.2);
+    left: -304px;
+  }
+  &.md-locked-open {
+    .vertical-menu {
+//      opacity: 1;
+      left: 0;
+    }
+  }
+}
+
+
+//.vertical-menu {
+//  margin: 0;
+//  padding:  0;
+//  md-list-item {
+//    padding:0;
+//    .md-button {
+//      text-align:left;
+//      margin: 0;
+//      border-radius: 0;
+//      md-icon {
+////        margin-right: 2rem;
+//      }
+//    }
+//  }
+//}
+
+
+
+//md-list {
+//  display: block;
+//  padding: 0;
+//  md-item {
+//	display: block;
+//	.md-button {
+//	  display: block;
+//	  text-transform: none;
+//	  width: 100%;
+//	  padding: 15px 12px;
+//	  text-align: left;
+//	  border-radius: 0 !important;
+//	  .chevron {
+//		position: absolute;
+//		right: 5px;
+//		font-size: 115%;
+//		line-height: 100%;
+//		opacity: 0.4;
+//	  }
+//	}
+//	md-list {
+//		padding: 0;
+//	  .md-button {
+//		padding-left: 20px;
+//	  }
+//	}
+//  }
+//
+//}

@@ -1,0 +1,86 @@
+.og-checkbox {
+    user-select: none;
+    margin-bottom: 0;
+    cursor: pointer;
+    position: relative;
+    font: inherit;
+
+    .states {
+      height: 100%;
+      overflow: hidden;
+      display: block;
+      padding-right: 26px;
+      padding-left: 0;
+      word-break: break-all;
+    }
+    .state {
+      display: block;
+    }
+    .state-on {
+      opacity: 0;
+    }
+    .state-off {
+      top: -100%;
+      position: relative;
+      opacity: 1;
+    }
+
+    .icons {
+      position: absolute;
+      right: 0;
+      width: 26px;
+    }
+
+    .icon {
+      font-size: 20px;
+      vertical-align: middle;
+      position: absolute;
+      left: 0;
+    }
+    .icon-checked {
+      transition: all 0.1s;
+      font-size: 20px;
+      opacity: 0;
+      top: -2px;
+      left:  0;
+      transform: scale(0.2);
+    }
+    .icon-unchecked {
+      color:  #999;
+    }
+
+
+  &.checked {
+    .state-on {
+      opacity: 1;
+    }
+    .state-off {
+      opacity: 0;
+    }
+    .icon-checked {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.form-inline {
+  .og-checkbox {
+    .icons {
+      right: auto;
+      left: 0;
+    }
+    .icon {
+      right: 0;
+      left: auto;
+    }
+    .icon-checked {
+      left:  auto;
+      right: -4px;
+    }
+    .states {
+      padding-right: 0;
+      padding-left: 26px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+md-toast {
+  position: fixed;
+  opacity: 0.6 !important;
+  color: #fff;
+  padding-right: 5px;
+
+  &.info {
+    background: #0000AA;
+  }
+  &.warn {
+    background: #8f0e00;
+  }
+  &.success {
+    background: #008104;
+  }
+  .md-button {
+    margin-left: 10px;
+  }
+}
+html {
+  //overflow: hidden !important;
+}
+body {
+  //overflow: auto !important;
+}
+

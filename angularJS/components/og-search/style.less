@@ -1,0 +1,39 @@
+.og-search {
+  position: relative;
+  .dropdown-menu {
+    margin-top: 0;
+    width: 100%;
+    padding: 0;
+    max-height: 130px;
+    overflow: auto;
+
+    display: block;
+    transform-origin: 50% 0;
+    transform: scale(0.98,0);
+    visibility: collapse;
+    opacity: 0;
+    transition: opacity 0.1s, margin 0.15s,transform 0.1s;
+
+    li {
+      cursor: default;
+    }
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 0;
+      transform: scale(1);
+    }
+    &.empty-result {
+      a {
+        background: inherit !important;
+        color: inherit !important;
+      }
+    }
+    &.loader.transparent {
+      background: transparent;
+      box-shadow: none;
+      border: none;
+    }
+  }
+}
